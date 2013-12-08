@@ -22,7 +22,7 @@ require 'resque_scheduler/server'
 
 module ExampleAgent
 
-  REDIS_CONF = YAML.load_file("config/redis_conf.yml")['development']
+  REDIS_CONF = YAML.load_file("config/redis_conf.yml")['production']
   $redis = Resque.redis = Redis::Sentinel.new(REDIS_CONF['SENTINEL_HOSTS'].map {|host| {:host => host, :port => REDIS_CONF['SENTINEL_PORT']}}, :master_name => REDIS_CONF['SENTINEL_CLUSTER_NAME'], :db => REDIS_CONF['REDIS_RESQUE_DB'], :reconnect_wait => REDIS_CONF['RECONNECT_WAIT'], :failover_timeout => REDIS_CONF['FAILOVER_TIMEOUT'])
   Resque.redis = $redis
 
@@ -37,7 +37,8 @@ module ExampleAgent
       report_metric "WorkerCount", "WorkerCount", Resque.workers.count.to_f
       report_metric "SomeTest", "Test", 5.0
       report_metric "SchedulerDown", "SchedulerDown", ((`ps aux | grep resque-sched | grep -v grep` == "") ? 1.0 : 0.0)
-
+	puts "NUmber of working workers: #{Resque.working.count}"
+      report_metric "Working", "Working", Resque.working.count.to_f
     end
   end
 
