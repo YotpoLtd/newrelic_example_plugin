@@ -28,16 +28,16 @@ module ExampleAgent
 
   class Agent < NewRelic::Plugin::Agent::Base
 
-    agent_guid "com.yotpo.Resque"
+    agent_guid "com.yotpo.AsyncServers"
     agent_version "1.0.1"
     agent_config_options :hertz  # frequency of the periodic functions
-    agent_human_labels("Resque Agent") { hostname = Socket.gethostbyname(Socket.gethostname).first }
+    agent_human_labels("Resque Agent") { "Async Common" }
 
     def poll_cycle
-      report_metric "WorkerCount", "WorkerCount", Resque.workers.count.to_f
-      report_metric "SomeTest", "Test", 5.0
-      report_metric "SchedulerDown", "SchedulerDown", ((`ps aux | grep resque-sched | grep -v grep` == "") ? 1.0 : 0.0)
-
+      hostname = Socket.gethostbyname(Socket.gethostname).first
+      report_metric "Workers/Total", "Workers", Resque.workers.count.to_f
+      report_metric "Workers/Working", "Workers", Resque.working.count.to_f
+      report_metric "SchedulerDown/#{hostname}" , "Down", ((`ps aux | grep resque-sched | grep -v grep` == "") ? 1.0 : 0.0)
     end
   end
 
