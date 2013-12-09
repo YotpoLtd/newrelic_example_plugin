@@ -38,7 +38,8 @@ module ExampleAgent
       info = Resque.info;
       report_metric "Workers/Total", "Workers", Resque.workers.count.to_f
       report_metric "Workers/Working", "Workers", Resque.working.count.to_f
-      report_metric "SchedulerDown/#{hostname}" , "Down", ((`ps aux | grep resque-sched | grep -v grep` == "") ? 1.0 : 0.0)
+      report_metric "Alerts/SchedulerDown" , "Active", ((`ps aux | grep resque-sched | grep -v grep` == "") ? 1.0 : 0.0)
+      report_metric "Alerts/NotEnoughWorkers", "Active", (info[:workers] < 50 ? 1.0 : 0.0)
       report_metric "Jobs/Pending", "Jobs", info[:pending].to_f
       report_metric "Jobs/Processed", "Jobs", info[:processed].to_f 
       report_metric "Jobs/Failed", "Jobs", info[:failed].to_f

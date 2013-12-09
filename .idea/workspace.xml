@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2705bef9-b050-44be-baf5-8a4147c57095" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newrelic_yotpo_agent" afterPath="$PROJECT_DIR$/newrelic_yotpo_agent" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/redis_conf.yml" afterPath="$PROJECT_DIR$/config/redis_conf.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="newrelic_example_plugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,7 +14,7 @@
     <file path="/a.dummy" changelist="2705bef9-b050-44be-baf5-8a4147c57095" time="1384853309600" ignored="false" />
     <file path="$PROJECT_DIR$/../yotpo-api/app/classes/async/product_image_saver.rb" changelist="2705bef9-b050-44be-baf5-8a4147c57095" time="1384853352290" ignored="false" />
     <file path="/product_image_saver.rb" changelist="2705bef9-b050-44be-baf5-8a4147c57095" time="1384853325626" ignored="false" />
-    <file path="/newrelic_yotpo_agent" changelist="2705bef9-b050-44be-baf5-8a4147c57095" time="1386582238155" ignored="false" />
+    <file path="/newrelic_yotpo_agent" changelist="2705bef9-b050-44be-baf5-8a4147c57095" time="1386586741098" ignored="false" />
     <file path="$PROJECT_DIR$/../yotpo-api/Gemfile" changelist="2705bef9-b050-44be-baf5-8a4147c57095" time="1386510148518" ignored="false" />
     <file path="/Gemfile" changelist="2705bef9-b050-44be-baf5-8a4147c57095" time="1386508495709" ignored="false" />
     <file path="/newrelic_plugin.yml" changelist="2705bef9-b050-44be-baf5-8a4147c57095" time="1386502450538" ignored="false" />
@@ -119,7 +119,16 @@
       <file leaf-file-name="newrelic_yotpo_agent" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/newrelic_yotpo_agent">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="40" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.5740433">
+            <state line="38" column="91" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.47420964">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resque.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p429@yotpo-b2c/gems/resque-1.25.1/lib/resque.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="453" column="10" selection-start="12875" selection-end="12875" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -435,13 +444,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p429/bundler/gems/redis-rb-e201cc2b3187/lib/redis/sentinel.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/redis_conf.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="45" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
@@ -535,9 +537,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p429@yotpo-b2c/gems/resque-1.25.1/lib/resque.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="453" column="10" selection-start="12875" selection-end="12875" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/newrelic_yotpo_agent">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="40" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.5740433">
+        <state line="38" column="91" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.47420964">
           <folding />
         </state>
       </provider>
