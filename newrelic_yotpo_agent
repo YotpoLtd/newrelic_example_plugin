@@ -22,7 +22,7 @@ require 'resque_scheduler/server'
 
 module ExampleAgent
 
-  REDIS_CONF = YAML.load_file("config/redis_conf.yml")['development']
+  REDIS_CONF = YAML.load_file("config/redis_conf.yml")['production']
   $redis = Resque.redis = Redis::Sentinel.new(REDIS_CONF['SENTINEL_HOSTS'].map {|host| {:host => host, :port => REDIS_CONF['SENTINEL_PORT']}}, :master_name => REDIS_CONF['SENTINEL_CLUSTER_NAME'], :db => REDIS_CONF['REDIS_RESQUE_DB'], :reconnect_wait => REDIS_CONF['RECONNECT_WAIT'], :failover_timeout => REDIS_CONF['FAILOVER_TIMEOUT'])
   Resque.redis = $redis
 
